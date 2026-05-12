@@ -11,65 +11,62 @@
 	<properties>
 		<docker.image.prefix>kammana</docker.image.prefix>
 		<sonar.host.url>http://18.181.164.81:9000/</sonar.host.url>
-
 	</properties>
+	
 	<dependencies>
-
-		
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
-
 	</dependencies>
+	
 	<repositories>
 		<repository>
-  <id>mydevops-feed</id>
-  <url>https://pkgs.dev.azure.com/shaikmustafa8991/myproject/_packaging/mydevops-feed/maven/v1</url>
-  <releases>
-    <enabled>true</enabled>
-  </releases>
-  <snapshots>
-    <enabled>true</enabled>
-  </snapshots>
-</repository>
+			<id>mydevops-feed</id>
+			<url>https://pkgs.dev.azure.com/shaikmustafa8991/myproject/_packaging/mydevops-feed/maven/v1</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
 	</repositories>
+	
 	<distributionManagement>
-		 <snapshotRepository>
-		    <id>nexusRepo</id>
-		    <url>http://3.133.161.194:8081/repository/myrepo/</url>
-		 </snapshotRepository>
-		
+		<snapshotRepository>
+			<id>nexusRepo</id>
+			<url>http://3.133.161.194:8081/repository/myrepo/</url>
+		</snapshotRepository>
 		<repository>
-  <id>mydevops-feed</id>
-  <url>https://pkgs.dev.azure.com/shaikmustafa8991/myproject/_packaging/mydevops-feed/maven/v1</url>
-  <releases>
-    <enabled>true</enabled>
-  </releases>
-  <snapshots>
-    <enabled>true</enabled>
-  </snapshots>
-</repository>
-  	</distributionManagement>
+			<id>mydevops-feed</id>
+			<url>https://pkgs.dev.azure.com/shaikmustafa8991/myproject/_packaging/mydevops-feed/maven/v1</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</distributionManagement>
 	
 	<pluginRepositories>
-	    <pluginRepository>    
-		<id>maven1</id>
-		<name>Maven.org</name>
-		<url>http://repo1.maven.org/maven2</url>
-	    </pluginRepository>
+		<pluginRepository>    
+			<id>maven1</id>
+			<name>Maven.org</name>
+			<url>http://repo1.maven.org/maven2</url>
+		</pluginRepository>
 	</pluginRepositories>
-	<build>
-	<plugins>
-		<plugin>
-			<groupld>org.apache.maven.plugins</groupld>
-			<artifactld>maven-war-plugin</artifactld>
-			<version>3.4.0</version> <!-- or latest stable -- >
-        </plugin>
-	</plugins> 
-    </build>
-
 	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.4.0</version>
+			</plugin>
+		</plugins> 
+	</build>
 </project>
